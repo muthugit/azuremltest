@@ -1,3 +1,5 @@
-import logging
-logging.basicConfig(level=logging.DEBUG)
-logging.info("This is app")
+from azureml.core import Run
+
+run = Run.get_context()
+
+run.parent.log("this is app log")
